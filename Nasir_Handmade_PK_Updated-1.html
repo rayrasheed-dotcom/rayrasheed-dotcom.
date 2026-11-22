@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nasir Handmade PK</title>
+<meta name="description" content="Handmade wooden bird houses and miniature model houses by Nasir Handmade PK.">
+<style>
+:root{--green:#174b3a;--gold:#d7a94b;--cream:#faf7f0;--ink:#20312b}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Nastaliq Urdu",sans-serif;background:var(--cream);color:var(--ink);line-height:1.7}
+header{background:linear-gradient(120deg,#123b30,#23634c);color:white;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.logo{font-size:1.45rem;font-weight:800} .logo span{color:#f2cc78}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:white;text-decoration:none;font-weight:600}
+button,.btn{border:0;border-radius:9px;padding:11px 17px;background:var(--gold);color:#172b23;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.lang{background:#fff;color:var(--green)}.admin-top{background:#fff;color:var(--green)}
+.hero{padding:58px 6%;text-align:center;background:linear-gradient(135deg,#e8ddc7,#f9f4e9)}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);margin:0 0 12px;color:var(--green)}
+.hero p{font-size:1.1rem;max-width:700px;margin:0 auto 24px}
+section{padding:42px 6%}.section-title{text-align:center;color:var(--green);font-size:2rem;margin:0 0 8px}.sub{text-align:center;margin:0 0 28px;color:#65756d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 5px 18px #20312b12;border:1px solid #eee}
+.photo{height:210px;background:linear-gradient(135deg,#d7c3a0,#f2e8d6);display:flex;align-items:center;justify-content:center;color:#5a4831;font-size:3.5rem;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.card-content{padding:17px}.card h3{margin:0 0 5px;color:var(--green)}.price{font-weight:800;color:#9a6c17;margin:8px 0}
+.card .btn{width:100%;text-align:center}.order{background:#173f32;color:white;text-align:center}.order h2{color:#f3d38a}
+.order p{max-width:650px;margin:0 auto 20px}
+form{max-width:550px;margin:20px auto 0;display:grid;gap:12px;text-align:right}
+input,textarea,select{width:100%;padding:12px;border-radius:8px;border:1px solid #cbd5ce;font:inherit}
+label{font-weight:700}.small{font-size:.9rem;opacity:.85}
+footer{background:#102c24;color:#e8eee9;text-align:center;padding:22px}
+.admin{display:none;background:#fff;border:2px solid #d7a94b;border-radius:14px;padding:20px;margin:25px auto;max-width:850px}
+.admin h3{margin-top:0;color:var(--green)}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.danger{background:#b83232;color:white}
+.hint{background:#fff4d9;border-right:4px solid var(--gold);padding:12px;border-radius:8px;font-size:.92rem}
+.empty{grid-column:1/-1;text-align:center;padding:25px;background:#fff;border-radius:12px}
+@media(max-width:600px){header{justify-content:center;text-align:center}nav{justify-content:center}.hero{padding:42px 5%}section{padding:32px 5%}.admin-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Nasir <span>Handmade</span> PK</div>
+  <nav><a href="#home">ہوم</a><a href="#products">مصنوعات</a><a href="#order">آرڈر</a></nav>
+  <div><button class="lang" id="langBtn">English</button> <button class="admin-top" id="adminOpen">ایڈمن</button></div>
+</header>
+<main>
+<section class="hero" id="home">
+  <h1>لکڑی سے بنے ہاتھ کے خوبصورت شاہکار</h1>
+  <p>خوبصورت ہاتھ سے تیار کردہ برڈ ہاؤس اور لکڑی کے ماڈل گھر دیکھیں۔ اپنا پسندیدہ ڈیزائن منتخب کریں اور واٹس ایپ پر آرڈر کریں۔</p>
+  <a class="btn" href="#products">مصنوعات دیکھیں</a>
+</section>
+<section id="products">
+  <h2 class="section-title">ہماری مصنوعات</h2>
+  <p class="sub">محبت اور محنت سے تیار کردہ — حسبِ فرمائش بھی بنوائیں۔</p>
+  <div class="grid" id="productGrid"></div>
+  <div class="admin" id="adminPanel">
+    <h3>پروڈکٹ مینیجر</h3>
+    <p class="hint">یہ ابتدائی آف لائن ایڈمن سہولت ہے: آپ کے اسی موبائل/براؤزر میں تبدیلیاں محفوظ ہوں گی۔ سب لوگوں کو نئی تصاویر اور قیمتیں دکھانے کے لیے اپڈیٹ شدہ ویب سائٹ دوبارہ ہوسٹ/اپلوڈ کرنا ہوگی۔</p>
+    <div class="admin-grid">
+      <label>پروڈکٹ کا نام<input id="pName" placeholder="مثلاً لکڑی کا برڈ ہاؤس"></label>
+      <label>قیمت (روپے)<input id="pPrice" type="number" min="0" placeholder="مثلاً 1500"></label>
+      <label>تصویر منتخب کریں<input id="pImage" type="file" accept="image/*"></label>
+      <label>مختصر تفصیل<input id="pDesc" placeholder="پروڈکٹ کی تفصیل"></label>
+    </div>
+    <div class="admin-actions"><button id="saveProduct">پروڈکٹ شامل کریں</button><button class="danger" id="resetProducts">ابتدائی فہرست بحال کریں</button><button id="closeAdmin">بند کریں</button></div>
+    <p id="adminMsg" class="small"></p>
+  </div>
+</section>
+<section class="order" id="order">
+  <h2>اپنا آرڈر بھیجیں</h2>
+  <p>اپنی تفصیل درج کریں۔ آپ کا آرڈر واٹس ایپ پر کھل جائے گا۔ قیمت، ڈیلیوری چارجز اور دستیابی کی تصدیق ہم آپ سے کریں گے۔</p>
+  <form id="orderForm">
+    <label>آپ کا نام<input id="customerName" required placeholder="نام"></label>
+    <label>پروڈکٹ / ڈیزائن<select id="productSelect"></select></label>
+    <label>تعداد<input id="quantity" type="number" min="1" value="1" required></label>
+    <label>شہر اور ڈیلیوری کا پتہ<textarea id="address" rows="2" required placeholder="اپنا شہر اور پتہ لکھیں"></textarea></label>
+    <label>مزید تفصیل (اختیاری)<textarea id="details" rows="2" placeholder="سائز، رنگ یا اپنی پسند کا ڈیزائن"></textarea></label>
+    <button type="submit">واٹس ایپ پر آرڈر بھیجیں</button>
+  </form>
+  <p class="small">واٹس ایپ: 0329 8296125</p>
+</section>
+</main>
+<footer>© <span id="year"></span> Nasir Handmade PK · محبت سے تیار کردہ</footer>
+<script>
+const phone="923298296125";
+const defaults=[
+ {id:1,name:"لکڑی کا برڈ ہاؤس",desc:"ہاتھ سے تیار کردہ برڈ ہاؤس۔ سائز اور ڈیزائن کی تفصیل معلوم کریں۔",price:"",image:"",emoji:"🏡"},
+ {id:2,name:"لکڑی کا ماڈل گھر",desc:"سجاوٹ کے لیے خوبصورت ماڈل گھر۔ اپنی پسند کا ڈیزائن بھی بنوائیں۔",price:"",image:"",emoji:"🏠"},
+ {id:3,name:"حسبِ فرمائش لکڑی کا کام",desc:"آپ کے ذہن میں کوئی ڈیزائن ہے؟ ہم سے رابطہ کریں۔",price:"",image:"",emoji:"🪵"}
+];
+let products=loadProducts(),english=false;
+function loadProducts(){try{return JSON.parse(localStorage.getItem("nhpk_products"))||defaults}catch(e){return defaults}}
+function save(){localStorage.setItem("nhpk_products",JSON.stringify(products))}
+function render(){
+ const grid=document.getElementById("productGrid"),sel=document.getElementById("productSelect");
+ grid.innerHTML="";sel.innerHTML="";
+ if(!products.length)grid.innerHTML='<div class="empty">ابھی کوئی پروڈکٹ موجود نہیں۔ ایڈمن سے نئی پروڈکٹ شامل کریں۔</div>';
+ products.forEach(p=>{
+  const card=document.createElement("article");card.className="card";
+  const photo=document.createElement("div");photo.className="photo";
+  if(p.image){const im=document.createElement("img");im.src=p.image;im.alt=p.name;photo.appendChild(im)}else photo.textContent=p.emoji||"🪵";
+  const content=document.createElement("div");content.className="card-content";
+  const h=document.createElement("h3");h.textContent=p.name;
+  const d=document.createElement("p");d.textContent=p.desc||"";
+  const price=document.createElement("div");price.className="price";price.textContent=p.price?`قیمت: ${Number(p.price).toLocaleString("en-PK")} روپے`:"قیمت: واٹس ایپ پر معلوم کریں";
+  const b=document.createElement("button");b.className="btn";b.textContent="آرڈر کریں";b.onclick=()=>{sel.value=String(p.id);document.getElementById("order").scrollIntoView({behavior:"smooth"})};
+  content.append(h,d,price,b);card.append(photo,content);grid.appendChild(card);
+  const opt=document.createElement("option");opt.value=p.name;opt.textContent=p.name;sel.appendChild(opt);
+ });
+}
+document.getElementById("adminOpen").onclick=()=>{document.getElementById("adminPanel").style.display="block";document.getElementById("adminPanel").scrollIntoView({behavior:"smooth"})};
+document.getElementById("closeAdmin").onclick=()=>document.getElementById("adminPanel").style.display="none";
+document.getElementById("saveProduct").onclick=()=>{
+ const name=document.getElementById("pName").value.trim(),price=document.getElementById("pPrice").value,desc=document.getElementById("pDesc").value.trim(),file=document.getElementById("pImage").files[0];
+ if(!name){document.getElementById("adminMsg").textContent="پہلے پروڈکٹ کا نام لکھیں۔";return}
+ const add=image=>{
+  products.push({id:Date.now(),name,price,desc,image,emoji:"🪵"});save();render();
+  ["pName","pPrice","pDesc","pImage"].forEach(id=>document.getElementById(id).value="");
+  document.getElementById("adminMsg").textContent="پروڈکٹ شامل ہو گئی۔";
+ };
+ if(file){if(file.size>3*1024*1024){document.getElementById("adminMsg").textContent="تصویر 3MB سے چھوٹی منتخب کریں۔";return}
+  const reader=new FileReader();reader.onload=e=>add(e.target.result);reader.readAsDataURL(file);
+ }else add("");
+};
+document.getElementById("resetProducts").onclick=()=>{if(confirm("کیا ابتدائی مصنوعات بحال کرنی ہیں؟")){products=defaults.map(x=>({...x}));save();render();document.getElementById("adminMsg").textContent="ابتدائی فہرست بحال ہوگئی۔"}};
+document.getElementById("orderForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=document.getElementById("customerName").value.trim(),product=document.getElementById("productSelect").value,qty=document.getElementById("quantity").value,address=document.getElementById("address").value.trim(),details=document.getElementById("details").value.trim();
+ const item=products.find(p=>p.name===product),price=item&&item.price?item.price+" روپے":"واٹس ایپ پر معلوم کریں";
+ const msg=`السلام علیکم! میں Nasir Handmade PK سے آرڈر کرنا چاہتا/چاہتی ہوں۔%0Aنام: ${encodeURIComponent(name)}%0Aپروڈکٹ: ${encodeURIComponent(product)}%0Aقیمت: ${encodeURIComponent(price)}%0Aتعداد: ${encodeURIComponent(qty)}%0Aپتہ: ${encodeURIComponent(address)}%0Aمزید تفصیل: ${encodeURIComponent(details)}%0Aبراہِ کرم آرڈر کی تصدیق کریں۔`;
+ window.open(`https://wa.me/${phone}?text=${msg}`,"_blank");
+});
+document.getElementById("langBtn").onclick=()=>{
+ english=!english;document.documentElement.lang=english?"en":"ur";document.documentElement.dir=english?"ltr":"rtl";
+ document.getElementById("langBtn").textContent=english?"اردو":"English";
+ document.querySelector("nav").innerHTML=english?'<a href="#home">Home</a><a href="#products">Products</a><a href="#order">Order</a>':'<a href="#home">ہوم</a><a href="#products">مصنوعات</a><a href="#order">آرڈر</a>';
+};
+document.getElementById("year").textContent=new Date().getFullYear();
+render();
+</script>
+</body></html>
